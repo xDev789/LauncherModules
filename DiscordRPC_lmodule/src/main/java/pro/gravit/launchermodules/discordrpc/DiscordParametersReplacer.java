@@ -8,10 +8,10 @@ public class DiscordParametersReplacer {
     public String replace(String str)
     {
         String result = str;
-        if(username != null) result = result.replace("%username%", username);
-        if(profileName != null) result = result.replace("%profileName%", profileName);
-        if(userUUID != null) result = result.replace("%userUUID%", userUUID);
-        if(minecraftVersion != null) result = result.replace("%minecraftVersion%", minecraftVersion);
+        if(username != null) result = result.replaceAll("%username%", username);
+        if(profileName != null) result = result.replaceAll("%profileName%", profileName);
+        if(userUUID != null) result = result.replaceAll("%userUUID%", userUUID);
+        if(minecraftVersion != null) result = result.replaceAll("%minecraftVersion%", minecraftVersion);
         return result;
     }
 }
